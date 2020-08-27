@@ -2,7 +2,7 @@ module.exports = {
   development: {
     username: 'postgres',
     password: null,
-    database: 'bq_development',
+    database: 'bq_dev',
     host: 'db',
     dialect: 'postgres',
     operatorsAliases: false,
@@ -18,7 +18,7 @@ module.exports = {
   production: {
     username: 'postgres',
     password: null,
-    database: 'bq_production',
+    database: 'bq_prod',
     host: 'db',
     dialect: 'postgres',
     operatorsAliases: false,
