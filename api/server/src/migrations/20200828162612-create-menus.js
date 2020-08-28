@@ -6,31 +6,31 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       item: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       menu: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
       },
       price: {
-        type: Sequelize.NUMBER
+        type: Sequelize.DECIMAL(10, 2),
       },
       type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('menus');
-  }
+  },
 };

@@ -6,55 +6,61 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       cliente: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
-      cozinheiro: {
-        type: Sequelize.STRING
-      },
+
       data: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       flagDelivered: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
-      garcom: {
-        type: Sequelize.STRING
-      },
+
       hora: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       horaInicial: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       horaFinal: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       mesa: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
       },
       status: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       tempoPreparo: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       total: {
-        type: Sequelize.NUMBER
+        type: Sequelize.DECIMAL(10, 2),
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
+      garcomId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'users', key: 'id' },
+      },
+      chefId: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+        references: { model: 'users', key: 'id' },
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('orders');
-  }
+  },
 };

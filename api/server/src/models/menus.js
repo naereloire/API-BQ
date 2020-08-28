@@ -4,8 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     'menus',
     {
       item: DataTypes.STRING,
-      menu: DataTypes.NUMBER,
-      price: DataTypes.NUMBER,
+      menu: DataTypes.INTEGER,
+      price: DataTypes.DECIMAL(10, 2),
       type: DataTypes.STRING,
     },
     {},
