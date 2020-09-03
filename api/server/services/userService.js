@@ -3,7 +3,7 @@ import database from '../src/models';
 class userService {
   static async getAllUsers() {
     try {
-      return await database.user.findAll();
+      return await database.users.findAll();
     } catch (error) {
       throw error;
     }

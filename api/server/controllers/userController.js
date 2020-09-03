@@ -1,4 +1,4 @@
-import AuthorService from '../services/userService';
+import userService from '../services/userService';
 import Util from '../utils/Utils';
 
 const util = new Util();
