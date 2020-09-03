@@ -35,26 +35,26 @@ class userController {
     }
   }
 
-  // static async updatedAuthor(req, res) {
-  //   const alteredAuthor = req.body;
-  //   const { id } = req.params;
-  //   if (!Number(id)) {
-  //     util.setError(400, 'Please input a valid numeric value');
-  //     return util.send(res);
-  //   }
-  //   try {
-  //     const updateAuthor = await AuthorService.updateAuthor(id, alteredAuthor);
-  //     if (!updateAuthor) {
-  //       util.setError(404, `Cannot find author with the id: ${id}`);
-  //     } else {
-  //       util.setSuccess(200, 'Author updated', updateAuthor);
-  //     }
-  //     return util.send(res);
-  //   } catch (error) {
-  //     util.setError(404, error);
-  //     return util.send(res);
-  //   }
-  // }
+  static async updatedUser(req, res) {
+    const alteredUser = req.body;
+    const { id } = req.params;
+    if (!Number(id)) {
+      util.setError(400, 'Please input a valid numeric value');
+      return util.send(res);
+    }
+    try {
+      const updateUser = await userService.updateUser(id, alteredUser);
+      if (!updateUser) {
+        util.setError(404, `Cannot find user with the id: ${id}`);
+      } else {
+        util.setSuccess(200, 'User updated', updateUser);
+      }
+      return util.send(res);
+    } catch (error) {
+      util.setError(404, error.message);
+      return util.send(res);
+    }
+  }
 
   // static async getAuthor(req, res) {
   //   const { id } = req.params;
@@ -75,29 +75,6 @@ class userController {
   //     return util.send(res);
   //   } catch (error) {
   //     util.setError(404, error);
-  //     return util.send(res);
-  //   }
-  // }
-
-  // static async deleteAuthor(req, res) {
-  //   const { id } = req.params;
-
-  //   if (!Number(id)) {
-  //     util.setError(400, 'Please provide a numeric value');
-  //     return util.send(res);
-  //   }
-
-  //   try {
-  //     const authorToDelete = await AuthorService.deleteAuthor(id);
-
-  //     if (authorToDelete) {
-  //       util.setSuccess(200, 'Author deleted');
-  //     } else {
-  //       util.setError(404, `Author with the id ${id} cannot be found`);
-  //     }
-  //     return util.send(res);
-  //   } catch (error) {
-  //     util.setError(400, error);
   //     return util.send(res);
   //   }
   // }
