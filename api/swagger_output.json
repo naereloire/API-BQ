@@ -1,12 +1,17 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "BQ api",
-    "Description": "api do projeto bq"
+    "title": "BQ API",
+    "Description": "API do projeto Burger \"Queen"
   },
   "host": "localhost:3000",
-  "basePath": "/",
-  "tags": [],
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "descrição"
+    }
+  ],
   "schemes": [
     "http"
   ],
@@ -16,16 +21,20 @@
   "paths": {
     "/users/": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "testando desrição",
         "parameters": [],
         "responses": {}
       }
     },
     "/users/{id}": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "testando desrição",
         "parameters": [
           {
             "name": "id",
@@ -38,16 +47,31 @@
     },
     "/user/add": {
       "post": {
-        "tags": [],
-        "description": "",
-        "parameters": [],
+        "tags": [
+          "Users"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "newUser",
+            "in": "body",
+            "description": "Informações do usuário.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/AddUser"
+            }
+          }
+        ],
         "responses": {}
       }
     },
     "/users/update/{id}": {
       "put": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "Users"
+        ],
+        "description": "testando desrição",
         "parameters": [
           {
             "name": "id",
@@ -59,5 +83,30 @@
       }
     }
   },
-  "definitions": {}
+  "definitions": {
+    "AddUser": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Julia"
+        },
+        "email": {
+          "type": "string",
+          "example": "julia@julia"
+        },
+        "sector": {
+          "type": "string",
+          "example": "salon"
+        }
+      },
+      "required": [
+        "name",
+        "email"
+      ],
+      "xml": {
+        "name": "AddUser"
+      }
+    }
+  }
 }

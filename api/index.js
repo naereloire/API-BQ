@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3000;
-app.use('/', userRoutes);
+app.use('/api', userRoutes);
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('*', (req, res) =>

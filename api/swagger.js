@@ -7,6 +7,15 @@ const doc = {
     title: 'BQ API',
     Description: 'API do projeto Burger "Queen',
   },
+  tags: [{ name: 'Users', description: 'descrição' }],
+  basePath: '/api',
+  definitions: {
+    AddUser: {
+      $name: 'Julia',
+      $email: 'julia@julia',
+      sector: 'salon',
+    },
+  },
 };
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
