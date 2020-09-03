@@ -38,29 +38,11 @@ class userService {
 
   static async getUser(id) {
     try {
-      const theuser = await database.user.findOne({
+      const theUser = await database.users.findOne({
         where: { id: Number(id) },
       });
 
-      return theuser;
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  static async deleteUser(id) {
-    try {
-      const userToDelete = await database.user.findOne({
-        where: { id: Number(id) },
-      });
-
-      if (userToDelete) {
-        const deleteduser = await database.user.destroy({
-          where: { id: Number(id) },
-        });
-        return deleteduser;
-      }
-      return null;
+      return theUser;
     } catch (error) {
       throw error;
     }
