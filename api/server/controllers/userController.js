@@ -14,27 +14,26 @@ class userController {
       }
       return util.send(res);
     } catch (error) {
-      util.setError(400, error);
+      util.setError(400, error.message);
       return util.send(res);
     }
   }
 
-  // static async addUser(req, res) {
-  //   console.log(req.body.name, req.body.is_alive);
-  //   if (!req.body.name || !req.body.is_alive) {
-  //     util.setError(400, 'Please provide complete details');
-  //     return util.send(res);
-  //   }
-  //   const newAuthor = req.body;
-  //   try {
-  //     const createdAuthor = await AuthorService.addAuthor(newAuthor);
-  //     util.setSuccess(201, 'Author Added!', createdAuthor);
-  //     return util.send(res);
-  //   } catch (error) {
-  //     util.setError(400, error.message);
-  //     return util.send(res);
-  //   }
-  // }
+  static async addUser(req, res) {
+    if (!req.body.name || !req.body.email || !req.body.sector) {
+      util.setError(400, 'Please provide complete details');
+      return util.send(res);
+    }
+    const newUser = req.body;
+    try {
+      const createdUser = await userService.addUser(newUser);
+      util.setSuccess(201, 'User Added!', createdUser);
+      return util.send(res);
+    } catch (error) {
+      util.setError(400, error.message);
+      return util.send(res);
+    }
+  }
 
   // static async updatedAuthor(req, res) {
   //   const alteredAuthor = req.body;

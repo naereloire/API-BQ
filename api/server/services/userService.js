@@ -11,7 +11,7 @@ class userService {
 
   static async addUser(newuser) {
     try {
-      return await database.user.create(newuser);
+      return await database.users.create(newuser);
     } catch (error) {
       throw error;
     }
@@ -19,12 +19,12 @@ class userService {
 
   static async updateUser(id, updateuser) {
     try {
-      const userToUpdate = await database.user.findOne({
+      const userToUpdate = await database.users.findOne({
         where: { id: Number(id) },
       });
 
       if (userToUpdate) {
-        await database.user.update(updateuser, {
+        await database.users.update(updateuser, {
           where: { id: Number(id) },
         });
 
