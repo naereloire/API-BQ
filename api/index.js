@@ -1,13 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import userRoutes from './server/routes/userRoutes';
+import swaggerUi from 'swagger-ui-express';
+import swaggerFile from './swagger_output.json';
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3000;
-app.use('/api/users', userRoutes);
+app.use('/', userRoutes);
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('*', (req, res) =>
   res.status(200).send('<html><h1>Hello World!</h1></html>'),
