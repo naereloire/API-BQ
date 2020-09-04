@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     {},
   );
   menus.associate = function (models) {
-    menus.hasMany(models.ordersItens);
+    menus.hasMany(models.ordersItens, { foreignKey: 'id' });
   };
   return menus;
 };

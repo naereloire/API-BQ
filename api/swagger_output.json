@@ -176,6 +176,85 @@
         ],
         "responses": {}
       }
+    },
+    "/orders/": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "description": "testando desrição",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/orders/{id}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/order/add": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "newOrder",
+            "in": "body",
+            "description": "Informações do Pedido.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/AddOrder"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/order/status/update/{id}": {
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "updateStatus",
+            "in": "body",
+            "description": "Alteração de Status.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "Concluído"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
     }
   },
   "definitions": {
@@ -221,6 +300,50 @@
       },
       "xml": {
         "name": "AddItem"
+      }
+    },
+    "AddOrder": {
+      "type": "object",
+      "properties": {
+        "cliente": {
+          "type": "string",
+          "example": "Julia"
+        },
+        "data": {
+          "type": "string",
+          "example": "2020/09/05"
+        },
+        "flagDelivered": {
+          "type": "boolean",
+          "example": false
+        },
+        "hora": {
+          "type": "string",
+          "example": "2020/09/05 17:45:01"
+        },
+        "horaInicial": {
+          "type": "string",
+          "example": "2020/09/05 17:03:05"
+        },
+        "mesa": {
+          "type": "number",
+          "example": 10
+        },
+        "status": {
+          "type": "string",
+          "example": "Em andamento"
+        },
+        "total": {
+          "type": "number",
+          "example": 30
+        },
+        "garcomId": {
+          "type": "number",
+          "example": 2
+        }
+      },
+      "xml": {
+        "name": "AddOrder"
       }
     }
   }
