@@ -81,6 +81,101 @@
         ],
         "responses": {}
       }
+    },
+    "/menus/": {
+      "get": {
+        "tags": [
+          "Menus"
+        ],
+        "description": "testando desrição",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/menus/{menu}": {
+      "get": {
+        "tags": [
+          "Menus"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "menu",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/menu/item/add": {
+      "post": {
+        "tags": [
+          "Menus"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "newItem",
+            "in": "body",
+            "description": "Informações do Item.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/AddItem"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/menu/item/update/{id}": {
+      "put": {
+        "tags": [
+          "Menus"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "updateItem",
+            "in": "body",
+            "description": "Informações do Item.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "price": {
+                  "type": "number",
+                  "example": 100
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/menu/item/{id}": {
+      "delete": {
+        "tags": [
+          "Menus"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {}
+      }
     }
   },
   "definitions": {
@@ -100,12 +195,32 @@
           "example": "salon"
         }
       },
-      "required": [
-        "name",
-        "email"
-      ],
       "xml": {
         "name": "AddUser"
+      }
+    },
+    "AddItem": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "string",
+          "example": "Queijo"
+        },
+        "menu": {
+          "type": "number",
+          "example": 2
+        },
+        "price": {
+          "type": "number",
+          "example": 3
+        },
+        "type": {
+          "type": "string",
+          "example": "Acompanhamento"
+        }
+      },
+      "xml": {
+        "name": "AddItem"
       }
     }
   }

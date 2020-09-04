@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import userRoutes from './server/routes/userRoutes';
+import menuRoutes from './server/routes/menuRoutes';
 import swaggerUi from 'swagger-ui-express';
 import swaggerFile from './swagger_output.json';
 
@@ -10,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3000;
 app.use('/api', userRoutes);
+app.use('/api', menuRoutes);
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('*', (req, res) =>
