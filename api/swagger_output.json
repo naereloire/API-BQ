@@ -9,7 +9,19 @@
   "tags": [
     {
       "name": "Users",
-      "description": "descrição"
+      "description": "Conjuto de rotas para manipulação de usuários."
+    },
+    {
+      "name": "Menus",
+      "description": "Conjuto de rotas para manipulação de menus."
+    },
+    {
+      "name": "Orders",
+      "description": "Conjuto de rotas para manipulação de pedidos."
+    },
+    {
+      "name": "Orders Itens",
+      "description": "Conjuto de rotas para manipulação de itens de um pedido."
     }
   ],
   "schemes": [
@@ -24,9 +36,16 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os usuários na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuários encontrados."
+          },
+          "400": {
+            "description": "Erro na consulta."
+          }
+        }
       }
     },
     "/users/{id}": {
@@ -34,7 +53,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de usuários na base de dados por **_id_**.",
         "parameters": [
           {
             "name": "id",
@@ -42,7 +61,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuário Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Usuário não Encontrado."
+          }
+        }
       }
     },
     "/user/add": {
@@ -50,7 +79,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação de usuários, na base de dados conforme **_newUser_**.",
         "parameters": [
           {
             "name": "newUser",
@@ -63,7 +92,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Usuário Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/users/update/{id}": {
@@ -71,7 +107,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, de informações do usuário na base de dados.",
         "parameters": [
           {
             "name": "id",
@@ -79,7 +115,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuário Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Usuário não Encontrado."
+          }
+        }
       }
     },
     "/menus/": {
