@@ -43,7 +43,7 @@
             "description": "Usuários encontrados."
           },
           "400": {
-            "description": "Erro na consulta."
+            "description": "Requisição Inválida."
           }
         }
       }
@@ -79,7 +79,7 @@
         "tags": [
           "Users"
         ],
-        "description": "Essa rota realiza criação de usuários, na base de dados conforme **_newUser_**.",
+        "description": "Essa rota realiza criação de novo usuário, na base de dados conforme **_newUser_**.",
         "parameters": [
           {
             "name": "newUser",
@@ -133,9 +133,16 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os menus na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Menus encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/menus/{menu}": {
@@ -143,7 +150,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de menu na base de dados por **_nº do menu_ que é diferente do **_id_**.",
         "parameters": [
           {
             "name": "menu",
@@ -151,7 +158,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Menu Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Menu não Encontrado."
+          }
+        }
       }
     },
     "/menu/item/add": {
@@ -159,7 +176,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação de novo item, no menu conforme **_newItem:_**",
         "parameters": [
           {
             "name": "newItem",
@@ -172,7 +189,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Item Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/menu/item/update/{id}": {
@@ -180,7 +204,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, de informações do item no menu através do **_id_**, conforme updateItem:.",
         "parameters": [
           {
             "name": "id",
@@ -204,7 +228,17 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     },
     "/menu/item/{id}": {
@@ -212,7 +246,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza exclusão de um intem do menu.",
         "parameters": [
           {
             "name": "id",
@@ -220,7 +254,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item Exluído."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     },
     "/orders/": {

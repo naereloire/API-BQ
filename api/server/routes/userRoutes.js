@@ -34,7 +34,7 @@ router.post(
   '/user/add',
   userController.addUser,
   // #swagger.tags = ["Users"]
-  // #swagger.description="Essa rota realiza criação de usuários, na base de dados conforme **_newUser_**."
+  // #swagger.description="Essa rota realiza criação de novo usuário, na base de dados conforme **_newUser_**."
   /* #swagger.parameters['newUser'] = {
                in: 'body',
                description: 'Informações do usuário.',
