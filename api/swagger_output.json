@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "BQ API",
-    "Description": "API do projeto Burger \"Queen"
+    "Description": "API Burger \"Queen"
   },
   "host": "localhost:3000",
   "basePath": "/api",
@@ -255,6 +255,99 @@
         ],
         "responses": {}
       }
+    },
+    "/ordersItens/": {
+      "get": {
+        "tags": [
+          "Orders Itens"
+        ],
+        "description": "testando desrição",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/ordersItens/{id}": {
+      "get": {
+        "tags": [
+          "Orders Itens"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "tags": [
+          "Orders Itens"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/ordersItens/add": {
+      "post": {
+        "tags": [
+          "Orders Itens"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "newItem",
+            "in": "body",
+            "description": "Informações do Item.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/AddItemCount"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/order/update/count/{id}": {
+      "put": {
+        "tags": [
+          "Orders Itens"
+        ],
+        "description": "testando desrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "updateItemCount",
+            "in": "body",
+            "description": "Alteração de quantidade do item.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "example": 2
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
     }
   },
   "definitions": {
@@ -344,6 +437,26 @@
       },
       "xml": {
         "name": "AddOrder"
+      }
+    },
+    "AddItemCount": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "number",
+          "example": 2
+        },
+        "menuId": {
+          "type": "number",
+          "example": 1
+        },
+        "orderId": {
+          "type": "number",
+          "example": 3
+        }
+      },
+      "xml": {
+        "name": "AddItemCount"
       }
     }
   }

@@ -5,11 +5,12 @@ const endpointsFiles = [
   './api/server/routes/userRoutes.js',
   './api/server/routes/menuRoutes.js',
   './api/server/routes/orderRoutes.js',
+  './api/server/routes/ordersItensRoutes.js',
 ];
 const doc = {
   info: {
     title: 'BQ API',
-    Description: 'API do projeto Burger "Queen',
+    Description: 'API Burger "Queen',
   },
   tags: [{ name: 'Users', description: 'descrição' }],
   basePath: '/api',
@@ -35,6 +36,11 @@ const doc = {
       status: 'Em andamento',
       total: 30,
       garcomId: 2,
+    },
+    AddItemCount: {
+      count: 2,
+      menuId: 1,
+      orderId: 3,
     },
   },
 };
