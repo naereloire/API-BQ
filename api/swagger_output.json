@@ -385,9 +385,16 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os itens de pedido na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Itens do pedido não encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/ordersItens/{id}": {
@@ -395,7 +402,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de um item em um pedido através do **_id_**.",
         "parameters": [
           {
             "name": "id",
@@ -403,13 +410,23 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item do pedido Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item do pedido não Encontrado."
+          }
+        }
       },
       "delete": {
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza exclusão, de um item em um pedido.",
         "parameters": [
           {
             "name": "id",
@@ -417,7 +434,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item do pedido Excluído."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item do pedido não Encontrado."
+          }
+        }
       }
     },
     "/ordersItens/add": {
@@ -425,7 +452,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação, de um item à um pedido conforme **_newItem:_**.",
         "parameters": [
           {
             "name": "newItem",
@@ -438,7 +465,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Item Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/order/update/count/{id}": {
@@ -446,7 +480,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, na quantidade de item em um pedido conforme **_updateItemCount:_**.",
         "parameters": [
           {
             "name": "id",
@@ -470,7 +504,17 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Quantidade Atualizada."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     }
   },
