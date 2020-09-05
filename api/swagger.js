@@ -12,7 +12,24 @@ const doc = {
     title: 'BQ API',
     Description: 'API Burger "Queen',
   },
-  tags: [{ name: 'Users', description: 'descrição' }],
+  tags: [
+    {
+      name: 'Users',
+      description: 'Conjuto de rotas para manipulação de usuários.',
+    },
+    {
+      name: 'Menus',
+      description: 'Conjuto de rotas para manipulação de menus.',
+    },
+    {
+      name: 'Orders',
+      description: 'Conjuto de rotas para manipulação de pedidos.',
+    },
+    {
+      name: 'Orders Itens',
+      description: 'Conjuto de rotas para manipulação de itens de um pedido.',
+    },
+  ],
   basePath: '/api',
   definitions: {
     AddUser: {

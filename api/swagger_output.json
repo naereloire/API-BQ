@@ -9,7 +9,19 @@
   "tags": [
     {
       "name": "Users",
-      "description": "descrição"
+      "description": "Conjuto de rotas para manipulação de usuários."
+    },
+    {
+      "name": "Menus",
+      "description": "Conjuto de rotas para manipulação de menus."
+    },
+    {
+      "name": "Orders",
+      "description": "Conjuto de rotas para manipulação de pedidos."
+    },
+    {
+      "name": "Orders Itens",
+      "description": "Conjuto de rotas para manipulação de itens de um pedido."
     }
   ],
   "schemes": [
@@ -24,9 +36,16 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os usuários na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuários encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/users/{id}": {
@@ -34,7 +53,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de usuários na base de dados por **_id_**.",
         "parameters": [
           {
             "name": "id",
@@ -42,7 +61,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuário Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Usuário não Encontrado."
+          }
+        }
       }
     },
     "/user/add": {
@@ -50,7 +79,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação de novo usuário, na base de dados conforme **_newUser_**.",
         "parameters": [
           {
             "name": "newUser",
@@ -63,7 +92,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Usuário Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/users/update/{id}": {
@@ -71,7 +107,7 @@
         "tags": [
           "Users"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, de informações do usuário na base de dados.",
         "parameters": [
           {
             "name": "id",
@@ -79,7 +115,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Usuário Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Usuário não Encontrado."
+          }
+        }
       }
     },
     "/menus/": {
@@ -87,9 +133,16 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os menus na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Menus encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/menus/{menu}": {
@@ -97,7 +150,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de um menu na base de dados por **_nº do menu_ que é diferente do **_id_**.",
         "parameters": [
           {
             "name": "menu",
@@ -105,7 +158,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Menu Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Menu não Encontrado."
+          }
+        }
       }
     },
     "/menu/item/add": {
@@ -113,7 +176,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação de novo item, no menu conforme **_newItem:_**",
         "parameters": [
           {
             "name": "newItem",
@@ -126,7 +189,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Item Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/menu/item/update/{id}": {
@@ -134,7 +204,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, de informações do item no menu através do **_id_**, conforme updateItem:.",
         "parameters": [
           {
             "name": "id",
@@ -158,7 +228,17 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     },
     "/menu/item/{id}": {
@@ -166,7 +246,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza exclusão de um intem do menu.",
         "parameters": [
           {
             "name": "id",
@@ -174,7 +254,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item Exluído."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     },
     "/orders/": {
@@ -182,9 +272,16 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os pedidos na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Pedidos encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/orders/{id}": {
@@ -192,7 +289,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de um pedido na base de dados através do **_id_** .",
         "parameters": [
           {
             "name": "id",
@@ -200,7 +297,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Pedido Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Pedido não Encontrado."
+          }
+        }
       }
     },
     "/order/add": {
@@ -208,7 +315,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação, de um novo pedido na base de dados conforme **_newOrder_**.",
         "parameters": [
           {
             "name": "newOrder",
@@ -221,7 +328,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Pedido Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/order/status/update/{id}": {
@@ -229,7 +343,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza Atualização, de status em um pedido através do **_id_** conforme **_updateStatus_**.",
         "parameters": [
           {
             "name": "id",
@@ -253,17 +367,40 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Status Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Pedido não Encontrado."
+          }
+        }
       }
     },
-    "/ordersItens/": {
+    "/ordersItens/order/{orderId}": {
       "get": {
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
-        "parameters": [],
-        "responses": {}
+        "description": "Essa rota realiza consulta, de todos os itens de um pedido específico na base de dados.",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Itens do pedido não encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/ordersItens/{id}": {
@@ -271,7 +408,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de um item em um pedido através do **_id_**.",
         "parameters": [
           {
             "name": "id",
@@ -279,13 +416,23 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item do pedido Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item do pedido não Encontrado."
+          }
+        }
       },
       "delete": {
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza exclusão, de um item em um pedido.",
         "parameters": [
           {
             "name": "id",
@@ -293,7 +440,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Item do pedido Excluído."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item do pedido não Encontrado."
+          }
+        }
       }
     },
     "/ordersItens/add": {
@@ -301,7 +458,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação, de um item à um pedido conforme **_newItem:_**.",
         "parameters": [
           {
             "name": "newItem",
@@ -314,7 +471,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Item Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/order/update/count/{id}": {
@@ -322,7 +486,7 @@
         "tags": [
           "Orders Itens"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza atualização, na quantidade de item em um pedido conforme **_updateItemCount:_**.",
         "parameters": [
           {
             "name": "id",
@@ -346,7 +510,17 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Quantidade Atualizada."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Item não Encontrado."
+          }
+        }
       }
     }
   },
