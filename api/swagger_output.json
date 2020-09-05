@@ -150,7 +150,7 @@
         "tags": [
           "Menus"
         ],
-        "description": "Essa rota realiza consulta, de menu na base de dados por **_nº do menu_ que é diferente do **_id_**.",
+        "description": "Essa rota realiza consulta, de um menu na base de dados por **_nº do menu_ que é diferente do **_id_**.",
         "parameters": [
           {
             "name": "menu",
@@ -272,9 +272,16 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de todos os pedidos na base de dados.",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Pedidos encontrados."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/orders/{id}": {
@@ -282,7 +289,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza consulta, de um pedido na base de dados através do **_id_** .",
         "parameters": [
           {
             "name": "id",
@@ -290,7 +297,17 @@
             "required": true
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Pedido Encontrado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Pedido não Encontrado."
+          }
+        }
       }
     },
     "/order/add": {
@@ -298,7 +315,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza criação, de um novo pedido na base de dados conforme **_newOrder_**.",
         "parameters": [
           {
             "name": "newOrder",
@@ -311,7 +328,14 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Pedido Criado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          }
+        }
       }
     },
     "/order/status/update/{id}": {
@@ -319,7 +343,7 @@
         "tags": [
           "Orders"
         ],
-        "description": "testando desrição",
+        "description": "Essa rota realiza Atualização, de status em um pedido através do **_id_** conforme **_updateStatus_**.",
         "parameters": [
           {
             "name": "id",
@@ -343,7 +367,17 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Status Atualizado."
+          },
+          "400": {
+            "description": "Requisição Inválida."
+          },
+          "404": {
+            "description": "Pedido não Encontrado."
+          }
+        }
       }
     },
     "/ordersItens/": {
