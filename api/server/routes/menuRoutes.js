@@ -19,7 +19,7 @@ router.get(
   '/menus/:menu',
   menuController.getMenu,
   // #swagger.tags = ["Menus"]
-  // #swagger.description="Essa rota realiza consulta, de menu na base de dados por **_nº do menu_ que é diferente do **_id_**."
+  // #swagger.description="Essa rota realiza consulta, de um menu na base de dados por **_nº do menu_ que é diferente do **_id_**."
   /* #swagger.responses[200] = { 
                description: 'Menu Encontrado.' 
         } */
