@@ -4,10 +4,10 @@ import ordersItensController from '../controllers/ordersItensController';
 const router = Router();
 
 router.get(
-  '/ordersItens/',
+  '/ordersItens/order/:orderId',
   ordersItensController.getAllOrderItens,
   // #swagger.tags = ["Orders Itens"]
-  // #swagger.description="Essa rota realiza consulta, de todos os itens de pedido na base de dados."
+  // #swagger.description="Essa rota realiza consulta, de todos os itens de um pedido específico na base de dados."
   /* #swagger.responses[200] = { 
                description: 'Itens do pedido não encontrados.' 
         } */

@@ -380,13 +380,19 @@
         }
       }
     },
-    "/ordersItens/": {
+    "/ordersItens/order/{orderId}": {
       "get": {
         "tags": [
           "Orders Itens"
         ],
-        "description": "Essa rota realiza consulta, de todos os itens de pedido na base de dados.",
-        "parameters": [],
+        "description": "Essa rota realiza consulta, de todos os itens de um pedido específico na base de dados.",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Itens do pedido não encontrados."

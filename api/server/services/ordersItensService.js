@@ -2,9 +2,11 @@ import database from '../src/models';
 // import ordersItens from '../src/models/ordersItens';
 
 class ordersItensService {
-  static async getAllOrderItens() {
+  static async getAllOrderItens(orderId) {
     try {
-      return await database.ordersItens.findAll();
+      return await database.ordersItens.findAll({
+        where: { orderId: Number(orderId) },
+      });
     } catch (error) {
       throw error;
     }

@@ -5,8 +5,13 @@ const util = new Util();
 
 class ordersItensController {
   static async getAllOrderItens(req, res) {
+    const { orderId } = req.params;
+    if (!orderId) {
+      util.setError(400, 'Please input a valid numeric value');
+      return util.send(res);
+    }
     try {
-      const allOrderItens = await ordersItensService.getAllOrderItens();
+      const allOrderItens = await ordersItensService.getAllOrderItens(orderId);
       if (allOrderItens.length > 0) {
         util.setSuccess(200, 'Itens retrieved', allOrderItens);
       } else {
