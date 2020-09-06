@@ -7,7 +7,7 @@
 
 * [1. Resumo do projeto](#1-resumo-do-projeto)
 * [1.2 Definições Técnicas](#1.2-definicoes-tecnicas)
-* [2. API BQ](#2-api)
+* [2. Implementações Futuras](#2-implementacoes-futuras)
 * [3. Montagem do ambiente de desenvolvimento](#4-montagem-do-ambiente-de-desenvolvimento)
 
 ---
