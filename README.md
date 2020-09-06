@@ -34,6 +34,10 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 
 ## 2. Implementações Futuras.
 
+* Desenvolvimento de testes de integração.
+* Unificação de rotas **_Orders_** e **_ordersItens_**.
+* Criação de rotas de **_Histórico_** e **_Autenticação_**.
+
 ## 3. Montagem do ambiente de desenvolvimento.
 
 <p align="center">
@@ -43,6 +47,14 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 > :warning: Será necessária a utilização:
 
 * [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
+
+:warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide)
+
+* Para verificar erros do ESLint:
+
+``` sh
+npm run pretest
+```
 
 <p align="center">
 Esse projeto faz parte do currículo do <a href="https://www.laboratoria.la/br">Bootcamp da Laboratória Brasil</a>
