@@ -14,7 +14,7 @@
 
 ## 1. Resumo do projeto.
 
-A aplicação consiste em servidor web que através de uma  [API](https://medium.com/@rullyalves/o-que-s%C3%A3o-apis-e-requisi%C3%A7%C3%B5es-http-919238f48206) **_rest_**, integrada a um banco de dados relacional, fornece métodos de manipulação [CRUD](https://www.codecademy.com/articles/what-is-crud) seguindo o modelo de arquitetura [MVC](https://www.profissionaisti.com.br/o-conceito-e-as-duvidas-sobre-o-mvc/)(Model View Controller).
+A aplicação consiste em servidor web que através de uma  [API](https://medium.com/@rullyalves/o-que-s%C3%A3o-apis-e-requisi%C3%A7%C3%B5es-http-919238f48206) **_rest_**, integrada a um banco de dados relacional, fornece métodos de manipulação [CRUD](https://www.codecademy.com/articles/what-is-crud) seguindo o modelo de arquitetura [MVC](https://www.profissionaisti.com.br/o-conceito-e-as-duvidas-sobre-o-mvc/) (Model View Controller).
 [Burger Queen](https://github.com/naereloire/SAP004-burger-queen) foi desenvolvida anteriormente, como uma aplicação de serviço para gerenciamento de pedidos de um restaurante fast-Food, o objetivo da **_API BQ_** é servir como back-end, substituíndo a **_cloud Firestore_** do [Firebase](https://firebase.google.com/?hl=pt-br&gclid=EAIaIQobChMI1sfkkZ7T6wIVk4aRCh399gXrEAAYASAAEgJ9p_D_BwE), possibilitando utilização de rotas para criação de usuários, menus e pedidos.
 
 ### 1.2 Definições Técnicas
