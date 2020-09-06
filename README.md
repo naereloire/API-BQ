@@ -19,6 +19,7 @@ A aplicação consiste em servidor web que através de uma  [API](https://medium
 
 ### 1.2 Definições Técnicas
 
+* **Docker:**
 * **Modelagem:**
 
 Para orientar a modelagem do banco de dados, pensando nas necessidade da aplicação **_Burger Queen_**, foi realizado um [**_DER_**](https://medium.com/@mauriciogeneroso/banco-de-dados-diagrama-entidade-x-relacionamento-der-5ce497d930db) (Diagrama Entidade Relacionamento) demonstrado abaixo:
@@ -27,6 +28,7 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 </p>
 
 * **MVC**
+
 * **Rotas**
 * **Documentação**
 
