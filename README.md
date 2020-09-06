@@ -1,5 +1,7 @@
 # API Burger Queen
 
+![](https://img.shields.io/github/languages/top/naereloire/SAP004-burger-queen-api?color=green&label=javascript%20&style=for-the-badge)
+
 ## Índice
 
 * [1. Resumo do projeto](#1-resumo-do-projeto)
