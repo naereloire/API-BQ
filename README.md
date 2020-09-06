@@ -19,11 +19,18 @@ A aplicação consiste em servidor web que através de uma  [API](https://medium
 
 ### 1.2 Definições Técnicas
 
-## 2. API BQ
+* **Modelagem:**
 
+Para orientar a modelagem do banco de dados, pensando nas necessidade da aplicação **_Burger Queen_**, foi realizado um [**_DER_**](https://medium.com/@mauriciogeneroso/banco-de-dados-diagrama-entidade-x-relacionamento-der-5ce497d930db) (Diagrama Entidade Relacionamento) demonstrado abaixo:
 <p align="center">
 <img src="./imgs/modeloER.jpg" width="400" heigth="400" >
 </p>
+
+* **MVC**
+* **Rotas**
+* **Documentação**
+
+## 2. Implementações Futuras.
 
 ## 3. Montagem do ambiente de desenvolvimento.
 
@@ -34,3 +41,16 @@ A aplicação consiste em servidor web que através de uma  [API](https://medium
 > :warning: Será necessária a utilização:
 
 * [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
+
+<p align="center">
+Esse projeto faz parte do currículo do <a href="https://www.laboratoria.la/br">Bootcamp da Laboratória Brasil</a>
+</p>
+
+<p align="center">
+Desenvolvido por: 
+<p/>
+
+<p align="center">
+:rocket:
+ <a href="https://github.com/naereloire">Naere Loire</a> :rocket:
+<p/>
