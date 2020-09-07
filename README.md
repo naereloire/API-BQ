@@ -5,12 +5,10 @@
 <h1 align="center"> API Burger Queen</h1>
 
 <center>
-<div>
 
 ![](https://img.shields.io/github/languages/top/naereloire/SAP004-burger-queen-api?color=green&label=javascript%20&style=for-the-badge)
 ![](https://img.shields.io/github/languages/top/naereloire/SAP004-burger-queen-api?color=green&label=node.js&style=for-the-badge)
 
-</div>
 </center>
 
 ## Índice
