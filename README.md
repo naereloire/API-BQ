@@ -30,10 +30,9 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 <img src="./imgs/modeloER.jpg" width="400" heigth="400" >
 </p>
 
-* **MVC:**  
-
-* **Rotas:**
 * **Documentação:**
+
+A Documentação da API foi realizada utilizando [Swagger](https://swagger.io/), que facilita o entendimento das rotas e possibilita a execução das requisições, como base nos modelos de payload.
 
 ## 2. Implementações Futuras.
 
