@@ -31,6 +31,7 @@ const doc = {
     },
   ],
   host: 'api-bqueen.herokuapp.com',
+  schemes: ['https'],
   basePath: '/api',
   definitions: {
     AddUser: {
