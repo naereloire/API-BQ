@@ -48,8 +48,7 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 </p>
 
 > :warning: Será necessária a utilização:
-
-* [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
+> [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
 
 * [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
