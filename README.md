@@ -91,7 +91,7 @@ git push heroku master
 **_Após o deploy execute:_**
 
 ```sh
-heroku run npx sequelize-cli db:seed:all --app app_name
+heroku run npx sequelize-cli db:migrate --app app_name
 ```
 
 <p align="center">
