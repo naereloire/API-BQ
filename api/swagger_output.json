@@ -4,7 +4,7 @@
     "title": "BQ API",
     "Description": "API Burger \"Queen"
   },
-  "host": "localhost:3000",
+  "host": "https://api-bqueen.herokuapp.com/",
   "basePath": "/api",
   "tags": [
     {
