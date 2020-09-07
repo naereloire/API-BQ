@@ -24,9 +24,7 @@
     "sequelize": "^5.22.3",
     "sequelize-cli": "^5.5.1",
     "swagger-autogen": "^1.1.0",
-    "swagger-ui-express": "^4.1.4"
-  },
-  "devDependencies": {
+    "swagger-ui-express": "^4.1.4",
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
@@ -34,7 +32,9 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
     "@babel/runtime": "^7.7.7",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.0.6"
+  },
+  "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1"
