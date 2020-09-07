@@ -53,13 +53,19 @@ models
 
 * [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
 
-:warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide)
-
-* Para verificar erros do ESLint:
+* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
 ``` sh
-npm run pretest
+git clone https://github.com/naereloire/SAP004-burger-queen-api.git
 ```
+
+* Instale as dependências do projeto com o comando:
+
+``` sh
+npm install
+```
+
+:warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide)
 
 <p align="center">
 Esse projeto faz parte do currículo do <a href="https://www.laboratoria.la/br">Bootcamp da Laboratória Brasil</a>
