@@ -55,12 +55,11 @@ A Documentação da API foi realizada utilizando [Swagger](https://swagger.io/),
 <img src="./imgs/lisaCoder.gif" width="300" heigth="300"> 
 </p>
 
-> :warning: Será necessária a utilização:  
+**_:warning: Será necessária a utilização:_**
+
 > [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
-
-> :warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide).
-
-> :warning: O **_deploy_** foi realizado com [Heroku](https://www.heroku.com/).
+> Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide).
+> O **_deploy_** foi realizado com [Heroku](https://www.heroku.com/).
 
 - [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
@@ -83,9 +82,10 @@ docker-compose up
 **_Nesse momento serão realizadas as migrations que criarão as tabelas no BD_**
 
 - Deploy:
+  **_Antes de realizar o deploy, será preciso configurar sua DB no Heroku_**
 
 ```sh
-
+git push origin heroku
 ```
 
 <p align="center">
