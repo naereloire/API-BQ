@@ -32,8 +32,6 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 
 * **MVC:**  
 
-models
-
 * **Rotas:**
 * **Documentação:**
 
