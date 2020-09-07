@@ -4,12 +4,10 @@
 
 <h1 align="center"> API Burger Queen</h1>
 
-<center>
-
 ![](https://img.shields.io/github/languages/top/naereloire/SAP004-burger-queen-api?color=green&label=javascript%20&style=for-the-badge)
 ![](https://img.shields.io/github/languages/top/naereloire/SAP004-burger-queen-api?color=green&label=node.js&style=for-the-badge)
 
-</center>
+_A documentação da API pode ser acessada atraves do Link: [BQ API](https://api-bqueen.herokuapp.com/)_
 
 ## Índice
 
@@ -51,15 +49,17 @@ A Documentação da API foi realizada utilizando [Swagger](https://swagger.io/),
 
 ## 3. Montagem do ambiente de desenvolvimento.
 
+**_:warning: Será necessária a utilização:_**
+
+> - [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
+> - Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide).
+> - O **_deploy_** foi realizado com [Heroku](https://www.heroku.com/).
+
+<h5 align="center" >:rocket: So let's Code</h5>
+
 <p align="center">
 <img src="./imgs/lisaCoder.gif" width="300" heigth="300"> 
 </p>
-
-**_:warning: Será necessária a utilização:_**
-
-> [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.  
-> Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide).  
-> O **_deploy_** foi realizado com [Heroku](https://www.heroku.com/).
 
 - [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
@@ -82,10 +82,16 @@ docker-compose up
 **_Nesse momento serão realizadas as migrations que criarão as tabelas no BD_**
 
 - Deploy:
-  **_Antes de realizar o deploy, será preciso configurar sua DB no Heroku_**
+  **_Antes de realizar o deploy, será preciso configurar seu DB no Heroku_**
 
 ```sh
 git push heroku master
+```
+
+**_Após o deploy execute:_**
+
+```sh
+heroku run npx sequelize-cli db:seed:all --app app_name
 ```
 
 <p align="center">
