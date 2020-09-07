@@ -55,7 +55,7 @@ A Documentação da API foi realizada utilizando [Swagger](https://swagger.io/),
 > - Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide).
 > - O **_deploy_** foi realizado com [Heroku](https://www.heroku.com/).
 
-<h5 align="center" >:rocket: So let's Code</h5>
+<h3 align="center" >:rocket: So let's Code</h3>
 
 <p align="center">
 <img src="./imgs/lisaCoder.gif" width="300" heigth="300"> 
