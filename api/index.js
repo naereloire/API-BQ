@@ -16,11 +16,7 @@ app.use('/api', userRoutes);
 app.use('/api', menuRoutes);
 app.use('/api', orderRoutes);
 app.use('/api', ordersItensRoutes);
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
-
-app.get('*', (req, res) =>
-  res.status(200).send('<html><h1>Hello World!</h1></html>'),
-);
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.listen(port, () => {
   console.log(`Server is running on PORT ${port}`);

@@ -30,7 +30,7 @@ const doc = {
       description: 'Conjuto de rotas para manipulação de itens de um pedido.',
     },
   ],
-  host: 'https://api-bqueen.herokuapp.com/',
+  host: 'api-bqueen.herokuapp.com',
   basePath: '/api',
   definitions: {
     AddUser: {
