@@ -82,7 +82,7 @@ docker-compose up
 **_Nesse momento serão realizadas as migrations que criarão as tabelas no BD_**
 
 - Deploy:
-  **_Antes de realizar o deploy, será preciso configurar seu DB no Heroku_**
+  **_Antes de realizar o deploy, será preciso configurar seu BD no Heroku_**
 
 ```sh
 git push heroku master
