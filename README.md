@@ -30,7 +30,9 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 <img src="./imgs/modeloER.jpg" width="400" heigth="400" >
 </p>
 
-* **MVC:**
+* **MVC:**  
+
+models
 
 * **Rotas:**
 * **Documentação:**
