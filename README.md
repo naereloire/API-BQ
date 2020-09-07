@@ -47,8 +47,10 @@ Para orientar a modelagem do banco de dados, pensando nas necessidade da aplica�
 <img src="./imgs/lisaCoder.gif" width="300" heigth="300"> 
 </p>
 
-> :warning: Será necessária a utilização:
-> [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.
+> :warning: Será necessária a utilização:  
+> [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/) para instalação das dependências.  
+
+> :warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide)
 
 * [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
@@ -61,8 +63,6 @@ git clone https://github.com/naereloire/SAP004-burger-queen-api.git
 ``` sh
 npm install
 ```
-
-:warning: Neste projeto a regras de [ESLint](https://eslint.org/) estão de acordo com o [Airbnb JavaScript Style Guide](https://github.com/armoucar/javascript-style-guide)
 
 <p align="center">
 Esse projeto faz parte do currículo do <a href="https://www.laboratoria.la/br">Bootcamp da Laboratória Brasil</a>
